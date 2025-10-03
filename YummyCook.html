@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Recipe Finder</title>
+  <link rel="stylesheet" href="YummyCook.css">
+</head>
+<body>
+
+<div class="welcome">
+  <h1>Hi! Welcome to Yummy Cook 🍴</h1>
+  <p>Discover recipes, tips, and healthy food ideas for every occasion.</p>
+</div>
+
+<div class="food-description">
+  <h2><b>Yummy</b></h2>
+  <p>
+    Food is a booster to our brain which creates tons of new ideas every day.<br>
+    Food changes the way we think and our health.<br>
+    Good food (healthy diet) helps in body-building and long life.
+  </p>
+</div>
+
+<div class="recipe-section">
+  <h2 class="Food-List">Let's Cook some tasty food together</h2>
+  <div class="ingredients">
+    <input type="text" id="ingredientInput" placeholder="Enter ingredient, e.g., chicken, paneer" onkeyup="showSuggestions(this.value)">
+    <button onclick="findRecipes()">Search</button>
+    <div id="suggestions"></div>
+  </div>
+
+  <div class="filters">
+    <button class="active" onclick="filterCategory('all', this)">All</button>
+    <button onclick="filterCategory('chicken', this)">Non-Veg</button>
+    <button onclick="filterCategory('paneer', this)">Veg</button>
+    <button onclick="filterCategory('snacks', this)">Snacks</button>
+    <button onclick="filterCategory('soup', this)">Soups</button>
+    <button onclick="filterCategory('juice', this)">Juices</button>
+    <button onclick="filterCategory('sweets', this)">Sweets</button>
+  </div>
+
+  <div id="recipeList" class="grid"></div>
+  <div id="instructions" class="instructions"></div>
+</div>
+
+<div class="footer">
+  <h5>
+    🍀 Cooking Tip: Always use fresh ingredients for better taste.<br>
+    🥗 Healthy Diet: Balance your meals with proteins, vegetables, and fruits.<br>
+    🙏 Thanks for visiting Yummy .com — come back for more recipes!
+  </h5>
+</div>
+
+<script src="YummyCook.js"></script>
+</body>
+  </html>
